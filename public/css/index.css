@@ -110,6 +110,7 @@ nav {
     font-family: var(--font-cherish);
     position: relative;
     line-height: 100%;
+    text-shadow: 5px 5px 20px #ffffff;
 }
 
 #hero-background {
@@ -165,7 +166,7 @@ nav {
     text-decoration: none;
     font-size: var(--font-size-lg);
     transition: background-color 0.3s ease;
-    margin-top: 40%;
+    margin-top: 30%;
     z-index: 10;
 }
 
