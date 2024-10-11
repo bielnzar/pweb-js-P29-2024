@@ -11,36 +11,84 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,600&display=swap">
     <script src="js/index.js"></script>
   </head>
-  <body>
+    <body>
     <header>
-      <div class="container">
-          <nav>
-              <div class="logo">29 th</div>
-              <ul class="nav-links">
-                  <li><a href="/public/index.html#home" class="nav-link active">Beranda</a></li>
-                  <li><a href="/public/index.html#about" class="nav-link">Tentang Kami</a></li>
-                  <li><a href="/public/index.html#products" class="nav-link">Produk</a></li>
-              </ul>
-              <div class="menu-toggle">
-                  <i class="fas fa-bars"></i>
-              </div>
-          </nav>
-      </div>
-  </header>
+        <div class="container">
+            <nav>
+                <div class="logo">29 th</div>
+                <ul class="nav-links">
+                    <li><a href="/public/index.html#home" class="nav-link active">Beranda</a></li>
+                    <li><a href="/public/index.html#about" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="/public/index.html#products" class="nav-link">Produk</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <div class="cart">
-      <a href="cart.html">
-          <i class="fas fa-shopping-cart"></i>
-          <span class="cart-count">0</span>
-      </a>
-  </div>
-
-  <div class="hero">
+    <div class="cart">
+        <a href="cart.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </a>
+    </div>
+    
+    <div class="hero">
     <div class="container">
         <h1>Keranjang Belanja</h1>
         </div>
         </div>
         
+    <script>
+        const cartContainer = document.getElementById('cart-items');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        function renderCart() {
+            cartContainer.innerHTML = '';
+            cart.forEach((item, index) => {
+        const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                            
+        <span>${item.name} - ${item.quantity} pcs</span>
+        <span>${item.price * item.quantity} IDR</span>
+        <button class="decrease" onclick="decreaseItem(${index})">-</button>
+        <button class="increase" onclick="increaseItem(${index})">+</button>
+        <button class="remove" onclick="removeItem(${index})">Remove</button>
+        `;
+        cartContainer.appendChild(cartItem);
+                    });
+                }
+        
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+            }
+        
+                
+        function increaseItem(index) {
+            cart[index].quantity++;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+            }
+        
+        
+        function decreaseItem(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                removeItem(index);
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+                }
+            renderCart();
+            </script>
+        
+
     <footer>
       <div class="footer-container">
         <!-- Visit Our Stores Section -->
