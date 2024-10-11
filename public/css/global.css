@@ -1,4 +1,3 @@
-/* Reset styles */
 body {
     margin: 0;
     font-family: var(--font-montserrat), sans-serif;
@@ -7,11 +6,10 @@ body {
 }
 
 :root {
-    /* Fonts */
+    
     --font-montserrat: Montserrat;
     --font-cherish: Cherish;
 
-    /* Font sizes */
     --font-size-base: 16px;
     --font-size-lg: 18px;
     --font-size-xl: 22px;
@@ -19,34 +17,28 @@ body {
     --font-size-title: 36px;
     --font-size-hero: 48px;
 
-    /* Colors */
-    --color-primary: #ACFADF; /* Background utama */
-    --color-secondary: #172161; /* Warna teks utama */
-    --color-accent: #7F7956; /* Warna aksen */
-    --color-background: #FFF8CE; /* Background dasar */
-    --color-text-light: #FFF; /* Teks terang */
+    --color-primary: #ACFADF; 
+    --color-secondary: #172161; 
+    --color-accent: #7F7956; 
+    --color-background: #FFF8CE; 
+    --color-text-light: #FFF; 
     
-    /* Spacing */
     --space-sm: 10px;
     --space-md: 20px;
     --space-lg: 40px;
 
-    /* Border radius */
     --radius-sm: 5px;
     --radius-lg: 15px;
 
-    /* Max width */
     --max-width: 1200px;
 }
 
-/* Container */
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--space-md);
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-montserrat);
     color: var(--color-secondary);
@@ -57,7 +49,6 @@ p {
     color: var(--color-secondary);
 }
 
-/* Buttons */
 .cta-button {
     background-color: var(--color-secondary);
     color: var(--color-text-light);

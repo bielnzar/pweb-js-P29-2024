@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Backgorund Hero
 document.addEventListener("DOMContentLoaded", function() {
     const heroBackground = document.getElementById('hero-background');
     const backgrounds = [

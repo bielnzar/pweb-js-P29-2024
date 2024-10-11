@@ -96,7 +96,6 @@
         <div class="container">
           <h2>Menu Es Krim Kami</h2>
           <div class="product-grid">
-            <!-- Produk akan ditambahkan di sini oleh JavaScript -->
           </div>
         </div>
         <div class="cart-modal">
@@ -110,7 +109,6 @@
 
     <footer>
       <div class="footer-container">
-        <!-- Visit Our Stores Section -->
         <div class="footer-locations">
           <div class="footer-location">
             <h3>Centre Point, LA</h3>
@@ -129,7 +127,6 @@
           </div>
         </div>
 
-        <!-- Connect With Us Section -->
         <div class="footer-connect">
           <h3>Connect with Us</h3>
           <ul>
@@ -140,14 +137,19 @@
           <p>29-icecream.carrd.co</p>
         </div>
 
-        <!-- Copyright Section -->
         <div class="footer-copyright">
           <p>© 2024 29th Kelontong. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
 
+    <script src="js/cart.js"></script>
     <script src="js/products.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setupCartFunctionality();
+        });
+    </script>
 
   </body>
 </html>

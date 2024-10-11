@@ -92,7 +92,6 @@ nav {
 }
 
 .hero {
-    /* background-image: url('../images/hero-background.jpg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -175,8 +174,8 @@ nav {
 }
 
 footer {
-    background-color: #7f7956; /* Warna latar belakang sesuai gambar */
-    color: #172161; /* Warna teks biru tua sesuai gambar */
+    background-color: #7f7956; 
+    color: #172161; 
     padding: 2rem 0;
     font-family: var(--font-montserrat);
 }
@@ -235,7 +234,7 @@ footer {
 }
 
 .footer-connect ul li a {
-    color: #e8ffce; /* Warna ikon media sosial sesuai gambar */
+    color: #e8ffce; 
     font-size: 1.5rem;
 }
 
@@ -408,7 +407,6 @@ footer {
     background-color: var(--color-accent-dark);
 }
 
-/* Bagian Fitur */
 .features {
     margin-top: 10px;
     margin-bottom: 1opx;
@@ -463,12 +461,12 @@ footer {
 }
 
 .container h2 {
-    font-size: var(--font-size-xl); /* Ukuran font yang lebih besar */
-    color: var(--color-secondary); /* Warna teks */
-    text-align: center; /* Pusatkan teks */
-    margin-bottom: 2rem; /* Tambahkan margin bawah */
-    font-family: var(--font-montserrat); /* Gunakan font Montserrat */
-    font-weight: bold; /* Tebalkan teks */
+    font-size: var(--font-size-xl); 
+    color: var(--color-secondary); 
+    text-align: center; 
+    margin-bottom: 2rem; 
+    font-family: var(--font-montserrat); 
+    font-weight: bold; 
 }
 
 @media (max-width: 1024px) {
@@ -520,12 +518,12 @@ footer {
     }
 
     .background-image {
-        max-width: 250px; /* Sesuaikan ukuran untuk tablet */
+        max-width: 250px; 
     }
 
     .cta-button {
-        padding: 0.6rem 1.2rem; /* Sesuaikan padding untuk tablet */
-        font-size: var(--font-size-md); /* Sesuaikan ukuran font untuk tablet */
+        padding: 0.6rem 1.2rem; 
+        font-size: var(--font-size-md); 
         margin-top: 350px;
     }
 }
