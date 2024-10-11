@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>29 th - Toko Es Krim Premium</title>
+    <title>29 th - Toko Kelontong</title>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/global.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
@@ -14,36 +14,38 @@
   <body>
     <header>
       <div class="container">
-        <nav>
-          <div class="logo">29 th</div>
-          <ul class="nav-links">
-            <li><a href="#home" class="nav-link active">Beranda</a></li>
-            <li><a href="#about" class="nav-link">Tentang Kami</a></li>
-            <li><a href="#products" class="nav-link">Produk</a></li>
-            <!-- Header -->
-            <div class="cart">
-              <a href="#cart">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-              </a>
-            </div>
-          </ul>
-          <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-          </div>
-        </nav>
+          <nav>
+              <div class="logo">29 th</div>
+              <ul class="nav-links">
+                  <li><a href="#home" class="nav-link active">Beranda</a></li>
+                  <li><a href="#about" class="nav-link">Tentang Kami</a></li>
+                  <li><a href="#products" class="nav-link">Produk</a></li>
+              </ul>
+              <div class="menu-toggle">
+                  <i class="fas fa-bars"></i>
+              </div>
+          </nav>
       </div>
-    </header> 
+  </header>
+
+  <div class="cart">
+      <a href="#cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+      </a>
+  </div>
 
     <main>
       <section id="home" class="page active">
         <div class="hero">
           <div class="container">
-            <h1>29th Ice Cream</h1>
-            <a href="#products" class="cta-button">Lihat Menu</a>
+              <h1>Kelontong 29th</h1>
+              <a href="#products" class="cta-button">Lihat Menu</a>
           </div>
-          <img class="background-image" alt="ice-cream-background-1" src="images/ice-cream-background-1.png"/>
-        </div>
+          <img id="hero-background" alt="ice-cream-background" src="/pweb-js-P29-2024/public/images/back-1.jpg" />
+          <button class="nav-button left" onclick="prevBackground()">&#10094;</button>
+          <button class="nav-button right" onclick="nextBackground()">&#10095;</button>
+        </div>  
         <div class="features">
           <div class="container">
             <div class="feature">
@@ -65,7 +67,7 @@
         </div>
 
         <div id="about" class="container">
-          <h2>Tentang 29 th</h2>
+          <h2>Tentang Kelontong 29 th</h2>
           <div class="about-content">
             <img src="images/image 21.png" alt="Toko Es Krim Kami" />
             <img src="images/image 22.png" alt="Toko Es Krim Kami" />
@@ -73,14 +75,14 @@
             <img src="images/image 26.png" alt="Toko Es Krim Kami" />
             <div class="about-text">
               <p>
-                29th Ice Cream didirikan pada tahun 1929 oleh kakek buyut kami,
+                Kelontong 29th didirikan pada tahun 1929 oleh kakek buyut kami,
                 Asep Sunandar. Dengan resep warisan keluarga dan bahan-bahan
                 terbaik, kami telah menyajikan es krim premium selama lebih dari
                 70 tahun.
               </p>
               <p>
                 Komitmen kami pada kualitas dan inovasi telah membuat 29 th
-                Ice Cream menjadi tujuan utama pecinta es krim di kota ini. Setiap
+                Kelontong menjadi tujuan utama pecinta es krim di kota ini. Setiap
                 cone es krim kami adalah hasil dari passion, dedikasi, dan
                 tradisi yang telah diwariskan dari generasi ke generasi.
               </p>
@@ -140,7 +142,7 @@
 
         <!-- Copyright Section -->
         <div class="footer-copyright">
-          <p>© 2024 29th Ice Cream. All Rights Reserved.</p>
+          <p>© 2024 29th Kelontong. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

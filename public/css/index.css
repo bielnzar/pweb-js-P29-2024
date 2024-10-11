@@ -99,8 +99,9 @@ nav {
     color: var(--color-secondary);
     text-align: center;
     padding: 0;
-    height: 100vh;
+    height: 90vh;
     position: relative;
+    overflow: hidden;
 }
 
 .hero h1 {
@@ -112,16 +113,42 @@ nav {
     line-height: 100%;
 }
 
-.background-image {
+#hero-background {
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 500px;
-    height: auto;
-    object-fit: cover;
-    z-index: 1;
-    transform: translate(-50%, -50%);
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+    transition: opacity 1s ease-in-out; 
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
 }
 
 .hero .container {
@@ -304,8 +331,22 @@ footer {
 }
 
 .cart {
-    margin-left: 20px;
-    position: relative;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-primary);
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.cart:hover {
+    background-color: var(--color-accent);
 }
 
 .cart a {
@@ -313,12 +354,15 @@ footer {
     text-decoration: none;
     font-size: 1.5rem;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cart-count {
     position: absolute;
-    top: -16px;
-    right: -2px;
+    top: -20px;
+    right: -20px;
     background-color: var(--color-accent);
     color: #fff;
     border-radius: 50%;
@@ -327,6 +371,10 @@ footer {
     width: 20px;
     height: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .cart-modal {
@@ -428,6 +476,12 @@ footer {
         font-size: var(--font-size-lg);
     }
 
+    #hero-background {
+        object-fit: cover;
+        height: 100%;
+        background-size: cover;
+    }
+
     .nav-links {
         display: none;
     }
@@ -485,8 +539,10 @@ footer {
         font-size: var(--font-size-xl);
     }
 
-    .background-image {
-        max-width: 200px; /* Sesuaikan ukuran untuk ponsel */
+    #hero-background {
+        object-fit: cover;
+        height: 100%;
+        background-size: cover;
     }
 
     .cta-button {
@@ -535,8 +591,10 @@ footer {
         font-size: 24px;
     }
 
-    .background-image {
-        max-width: 150px; /* Sesuaikan ukuran untuk layar yang lebih kecil */
+    #hero-background {
+        object-fit: cover;
+        height: 100%;
+        background-size: cover;
     }
 
     .cta-button {
